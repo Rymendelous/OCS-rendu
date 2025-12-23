@@ -1,9 +1,9 @@
 #include "iterative.h"
 #include "utilities.h"
-#include "gs_dynamic.h"
+#include "sor_dynamic.h"
 #include "blas1_static.h"
 #include "blas2_static.h"
-#include <stdlib.h>  // pour malloc et free
+#include <stdlib.h>  
 
 int main (int argc, char** argv){
 
@@ -14,6 +14,7 @@ int main (int argc, char** argv){
 
     double tol = 1e-10;
     double hx = 1./(Nx-1), hy = 1./(Ny-1);
+    double omega = 1.5;
 
     // --- Allocation dynamique ---
     a_dynamic = malloc(Nx * sizeof(double**));
@@ -39,8 +40,8 @@ int main (int argc, char** argv){
     set_u_dyn(u_old_dynamic, 0.);
     dscal(residual_stories, 0., Niter_max);
 
-    // --- Exécution de Gauss-Seidel dynamique ---
-    gs_dynamic(a_dynamic, b_dynamic, u_old_dynamic, residual_stories, hx, hy, tol);
+    // --- Exécution de SOR dynamique ---
+    sor_dynamic(a_dynamic, b_dynamic, u_old_dynamic, residual_stories, hx, hy, tol,omega);
 
     // --- Libération mémoire ---
     for (size_t i = 0; i < Nx; i++) {

@@ -27,8 +27,12 @@ cd SOR-static
 gcc -Wall main.c sor_static.c utilities.c blas1_static.c -o exec -lm
 ./exec
 ```
-
-
+Pour compiler et exécuter SOR en dynamique faire:
+```bash
+cd SOR-dynamic
+gcc -Wall main.c sor_dynamic.c utilities.c blas1_static.c -o exec -lm
+./exec
+```
 
 
 
