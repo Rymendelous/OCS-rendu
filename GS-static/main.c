@@ -22,7 +22,7 @@ int main (int argc, char** argv){
    // double u_new_static[Nx][Ny];
     double residual_stories[Niter_max];
 
-    double tol = 1e-6;
+    double tol = 1e-10;
     double hx = 1./(Nx-1), hy = 1./(Ny -1);
 
     // initialize a and b
