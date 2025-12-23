@@ -1,4 +1,4 @@
-# 🦋 Code pour Gauss-Seidel en statique 🦋
+# Code pour Gauss-Seidel en statique 🎀
 
 
 
