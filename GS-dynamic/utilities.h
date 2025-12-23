@@ -15,9 +15,7 @@ void print_a(double a[Nx][Ny][5]);
 
 void  init_a_dyn(double*** a, double hx, double hy);
 void set_u_dyn(double** u, double value);
-double l2_nrm_u_dyn(double** u);
-void copy_u_dyn(double** src, double** dst);
-
+void init_b_dyn(double** b, double hx, double hy);
 
 
 
