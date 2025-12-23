@@ -13,3 +13,8 @@ gcc -Wall main.c gs_static.c utilities.c -o exec -lm
 ```
 Pour compiler et exécuter Gauss-Seidel en dynamique faire:
 
+```bash
+cd GS-dynamic
+gcc -Wall main.c gs_dynamic.c utilities.c -o exec -lm
+./exec
+```
